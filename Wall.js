@@ -1,3 +1,3 @@
 const Wall = () => {
-  return <div className="wall"></div>
+  return <div className="wall"/>
 }

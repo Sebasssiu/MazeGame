@@ -1,3 +1,3 @@
 const Goal = () => {
-  return <div className="goal" />
+  return <div className="goal"/>
 }
