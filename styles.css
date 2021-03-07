@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+}
+.wall {
+  width: 100px;
+  height: 100px;
+  background-image: url("https://cdn2.iconfinder.com/data/icons/Siena/256/wall%20blue.png");
+  background-size: contain;
+}
+.player {
+  width: 100px;
+  height: 100px;
+  background-image: url("https://i.pinimg.com/originals/3c/65/38/3c6538ba3b02eef3a458869a6c230fa9.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("https://wallpaperaccess.com/full/956711.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.background {
+  background-image: url("https://wallpaperaccess.com/full/956711.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.empty {
+  width: 100px;
+  height: 100px;
+  background: rgba(0, 0, 0, 0);
+}
+.goal {
+  width: 100px;
+  height: 100px;
+  background-image: url("https://i.gifer.com/origin/71/719ea2f44c791fc07e0e811940a0232b_w200.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgb(15, 30, 75);
+}
+.loadingImage {
+  width: 100px;
+  height: 100px;
+  background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/disp/35771931234507.564a1d2403b3a.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
