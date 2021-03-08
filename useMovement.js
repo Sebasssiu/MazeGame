@@ -1,22 +1,31 @@
 const useMovement = (state, action) =>{
-    if(rect1.right < rect2.left || 
-        rect1.left > rect2.right || 
-        rect1.bottom < rect2.top || 
-        rect1.top > rect2.bottom)
-        {
-            return state
-        }else{
+    const validator = (y, x) =>{
+        if(state.maze[y][x]!=="-" && state.maze[y][x]!=="|" && state.maze[y][x]!=="+"){
+            return true
+        }
+        return false
+    }
+    switch(action.action){
+        case 'MOVEMENT':
             switch(action.type){
                 case 'ArrowUp':
-                    return {...state, y: state.y - action.pixels}
+                    if(validator(state.y-1,state.x)) return {...state, y: state.y - 1, movements: state.movements + 1, sprite: 'https://findicons.com/files/icons/1681/siena/256/wall_green.png'}
+                    return state
                 case 'ArrowDown':
-                    return {...state, y: state.y + action.pixels}
+                    if(validator(state.y+1,state.x)) return {...state, y: state.y + 1, movements: state.movements + 1, sprite: 'https://findicons.com/files/icons/1681/siena/256/wall_green.png'}
+                    return state
                 case 'ArrowLeft':
-                    return {...state, x: state.x - action.pixels}
+                    if(validator(state.y, state.x-1)) return {...state, x: state.x - 1, movements: state.movements + 1, sprite: 'https://findicons.com/files/icons/1681/siena/256/wall_red.png'}
+                    return state
                 case 'ArrowRight':
-                    return {...state, x: state.x + action.pixels}
+                    if(validator(state.y,state.x+1)) return {...state, x: state.x + 1, movements: state.movements + 1, sprite: 'https://findicons.com/files/icons/1681/siena/256/wall_red.png'}
+                    return state
                 default:
                     return state
             }
-        }
+        case 'LOADED':
+            return {...state, maze: action.maze}
+        default:
+            return state
+    }
 }

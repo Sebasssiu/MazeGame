@@ -5,30 +5,18 @@ body {
   margin: 0;
 }
 .wall {
-  width: 100px;
-  height: 100px;
-  z-index: 1;
   background-image: url("https://cdn2.iconfinder.com/data/icons/Siena/256/wall%20blue.png");
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .player {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  z-index: 2;
-  background-image: url("https://pa1.narvii.com/7783/3767156b56b13e7da5946715b3cec7a47632e253r1-500-375_00.gif");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 .empty {
-  width: 100px;
-  height: 100px;
   background: rgba(0, 0, 0, 0);
 }
 .goal {
-  width: 100px;
-  height: 100px;
-  z-index: 1;
   background-image: url("https://i.gifer.com/origin/71/719ea2f44c791fc07e0e811940a0232b_w200.gif");
   background-size: contain;
   background-repeat: no-repeat;
@@ -63,6 +51,7 @@ body {
   height: 50px;
   border-radius: 20px;
   color: white;
+  outline: none;
   background-color: rgb(15, 15, 56);
 }
 .input {
@@ -71,18 +60,38 @@ body {
   height: 50px;
   padding: 20px;
   margin: 10px;
+  outline: none;
   border-radius: 20px;
 }
 .title {
   color: white;
+  text-align: center;
   font-size: 100px;
   font-weight: 700;
+  transition: 3s;
+}
+.title:hover {
+  font-size: 150px;
+}
+.movements {
+  color: white;
+  text-align: center;
+  font-size: 50px;
 }
 .background {
   min-height: 100vh;
   background-image: url("https://wallpaperaccess.com/full/956711.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+}
+.maze {
+  position: absolute;
+  display: grid;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  min-height: 100vh;
 }
 .loading {
   display: flex;
