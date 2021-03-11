@@ -1,10 +1,5 @@
 const useMovement = (state, action) =>{
-    const validator = (y, x) =>{
-        if(state.maze[y][x]!=="-" && state.maze[y][x]!=="|" && state.maze[y][x]!=="+"){
-            return true
-        }
-        return false
-    }
+    const validator = (y, x) => (state.maze[y][x]!=="-" && state.maze[y][x]!=="|" && state.maze[y][x]!=="+")
     switch(action.action){
         case 'MOVEMENT':
             switch(action.type){

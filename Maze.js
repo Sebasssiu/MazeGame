@@ -1,5 +1,5 @@
 const Maze = (props) =>{
-  const container={
+  const container = {
     gridTemplateColumns: `repeat(${props.dimensions.width * 3 + 1},auto)`,
     gridTemplateRows: `repeat(${props.dimensions.height *2},auto)`
   }
