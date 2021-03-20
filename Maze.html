@@ -22,7 +22,12 @@
     <script type="text/babel" src="./Components.js"></script>
     <script type="text/babel" src="./useApi.js"></script>
     <script type="text/babel">
-      ReactDOM.render(<App />, document.querySelector("#root"));
+      // eslint-disable-next-line no-undef
+      ReactDOM.render(
+        // eslint-disable-next-line react/jsx-no-undef
+        <App />,
+        document.querySelector('#root'),
+      )
     </script>
   </body>
 </html>
